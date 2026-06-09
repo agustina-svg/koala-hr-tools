@@ -9,81 +9,74 @@
 <style>
 
 body{
-    font-family: Arial, sans-serif;
-    background:#f5f7fa;
     margin:0;
-    padding:30px;
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    color:#1f2937;
+}
+
+.header{
+    background:#0f172a;
+    color:white;
+    padding:40px;
+    text-align:center;
+}
+
+.header h1{
+    margin:0;
+    font-size:42px;
+}
+
+.header p{
+    opacity:0.8;
 }
 
 .container{
     max-width:1200px;
     margin:auto;
-}
-
-.header{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,.05);
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,.05);
+    padding:40px;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
-input{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
+.card{
+    background:white;
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h2{
+    margin-top:0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
     border-radius:8px;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
+.btn:hover{
+    background:#1d4ed8;
 }
 
-th{
-    background:#4ea1ff;
-    color:white;
-    padding:10px;
-}
-
-td{
-    padding:10px;
-    border-bottom:1px solid #eee;
-}
-
-.resultado{
-    font-size:28px;
-    font-weight:bold;
-    color:#2b7cff;
-}
-
-button{
-    background:#2b7cff;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-button:hover{
-    opacity:.9;
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#6b7280;
 }
 
 </style>
@@ -92,72 +85,57 @@ button:hover{
 
 <body>
 
+<div class="header">
+    <h1>🐨 Koala HR Tools</h1>
+    <p>Plataforma interna de Talento, Nómina y Analytics</p>
+</div>
+
 <div class="container">
 
-<div class="header">
-<h1>🐨 Koala HR Tools</h1>
-<p>Simulador de Liquidaciones Finales</p>
-</div>
+    <div class="grid">
 
-<div class="grid">
+        <div class="card">
+            <h2>🧮 Liquidaciones</h2>
+            <p>Simulador de liquidaciones finales.</p>
+            <a class="btn" href="./liquidaciones/">Abrir</a>
+        </div>
 
-<div class="card">
+        <div class="card">
+            <h2>📋 Conceptos Koala</h2>
+            <p>Base de conceptos utilizados en nómina.</p>
+            <a class="btn" href="#">Próximamente</a>
+        </div>
 
-<h3>Datos del colaborador</h3>
+        <div class="card">
+            <h2>💰 Costos Laborales</h2>
+            <p>Calculadora de costo empresa.</p>
+            <a class="btn" href="#">Próximamente</a>
+        </div>
 
-<label>Legajo</label>
-<input type="text">
+        <div class="card">
+            <h2>📈 Paritarias</h2>
+            <p>Impacto salarial e IPC.</p>
+            <a class="btn" href="#">Próximamente</a>
+        </div>
 
-<label>Nombre</label>
-<input type="text">
+        <div class="card">
+            <h2>🏢 Cierre de Sucursal</h2>
+            <p>Estimación de impacto económico.</p>
+            <a class="btn" href="#">Próximamente</a>
+        </div>
 
-<label>Fecha de ingreso</label>
-<input type="date">
+        <div class="card">
+            <h2>⚙️ Configuración</h2>
+            <p>Parámetros y tablas del sistema.</p>
+            <a class="btn" href="#">Próximamente</a>
+        </div>
 
-<label>Fecha de egreso</label>
-<input type="date">
-
-<label>Mejor remuneración bruta</label>
-<input type="number">
-
-</div>
-
-<div class="card">
-
-<h3>Conceptos variables</h3>
-
-<label>Horas extras</label>
-<input type="number">
-
-<label>Feriados trabajados</label>
-<input type="number">
-
-<label>Retroactivos</label>
-<input type="number">
-
-<label>Otros conceptos</label>
-<input type="number">
-
-<button>Calcular</button>
+    </div>
 
 </div>
 
-</div>
-
-<div class="card">
-
-<h2>Resultado</h2>
-
-<p>Base indemnizatoria:</p>
-<div class="resultado">$0</div>
-
-<br>
-
-<p>Indemnización estimada:</p>
-<div class="resultado">$0</div>
-
-</div>
-
+<div class="footer">
+    Koala HR Tools · Versión 0.1
 </div>
 
 </body>
