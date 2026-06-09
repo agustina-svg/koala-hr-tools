@@ -1,0 +1,44 @@
+[
+  {
+    "codigo": 10,
+    "concepto": "Sueldo Básico",
+    "tipo": "fijo",
+    "incluyeArt245": true,
+    "editable": false
+  },
+  {
+    "codigo": 15,
+    "concepto": "Feriados",
+    "tipo": "variable",
+    "incluyeArt245": "revisar",
+    "editable": true
+  },
+  {
+    "codigo": 17,
+    "concepto": "Feriados Trabajados",
+    "tipo": "variable",
+    "incluyeArt245": "revisar",
+    "editable": true
+  },
+  {
+    "codigo": 30,
+    "concepto": "Horas Extras",
+    "tipo": "variable",
+    "incluyeArt245": "revisar",
+    "editable": true
+  },
+  {
+    "codigo": 55,
+    "concepto": "Adicional Complementario Servicio",
+    "tipo": "fijo",
+    "incluyeArt245": true,
+    "editable": false
+  },
+  {
+    "codigo": 60,
+    "concepto": "Adicional por Zona",
+    "tipo": "fijo",
+    "incluyeArt245": true,
+    "editable": false
+  }
+]
