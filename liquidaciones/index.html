@@ -38,7 +38,7 @@ button{background:#2563eb;color:white;border:0;border-radius:8px;padding:12px 18
     <input id="nombre" placeholder="Ej: García Rivas Nathaly">
 
     <label>Legajo</label>
-    <input id="legajo" placeholder="Ej: 49">
+   <input id="legajo" placeholder="Ej: 49" oninput="buscarLegajo()">
 
     <label>Fecha de ingreso</label>
     <input id="ingreso" type="date">
@@ -99,6 +99,37 @@ button{background:#2563eb;color:white;border:0;border-radius:8px;padding:12px 18
 </div>
 
 <script>
+  let empleados = [];
+
+async function cargarEmpleados() {
+    try {
+        const response = await fetch('../data/empleados.json');
+        empleados = await response.json();
+        console.log("Empleados cargados:", empleados);
+    } catch(error){
+        console.error("Error cargando empleados", error);
+    }
+}
+
+function buscarLegajo() {
+
+    const legajo = document.getElementById("legajo").value;
+
+    const empleado = empleados.find(
+        e => e.legajo === legajo
+    );
+
+    if(!empleado) return;
+
+    document.getElementById("nombre").value =
+        empleado.nombre || "";
+
+    document.getElementById("ingreso").value =
+        empleado.fechaIngreso || "";
+
+    document.getElementById("bruto").value =
+        empleado.mejorBruto || "";
+}
 function dinero(n){
   return new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS'}).format(n || 0);
 }
@@ -181,6 +212,7 @@ function calcular(){
     Esta simulación es interna y debe validarse con el estudio contable antes de ejecutar una liquidación real.
   `;
 }
+  cargarEmpleados();
 </script>
 
 </body>
