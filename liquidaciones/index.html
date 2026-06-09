@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Koala HR Tools</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f7fa;
+    margin:0;
+    padding:30px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.header{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#4ea1ff;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #eee;
+}
+
+.resultado{
+    font-size:28px;
+    font-weight:bold;
+    color:#2b7cff;
+}
+
+button{
+    background:#2b7cff;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>🐨 Koala HR Tools</h1>
+<p>Simulador de Liquidaciones Finales</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Datos del colaborador</h3>
+
+<label>Legajo</label>
+<input type="text">
+
+<label>Nombre</label>
+<input type="text">
+
+<label>Fecha de ingreso</label>
+<input type="date">
+
+<label>Fecha de egreso</label>
+<input type="date">
+
+<label>Mejor remuneración bruta</label>
+<input type="number">
+
+</div>
+
+<div class="card">
+
+<h3>Conceptos variables</h3>
+
+<label>Horas extras</label>
+<input type="number">
+
+<label>Feriados trabajados</label>
+<input type="number">
+
+<label>Retroactivos</label>
+<input type="number">
+
+<label>Otros conceptos</label>
+<input type="number">
+
+<button>Calcular</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Resultado</h2>
+
+<p>Base indemnizatoria:</p>
+<div class="resultado">$0</div>
+
+<br>
+
+<p>Indemnización estimada:</p>
+<div class="resultado">$0</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
