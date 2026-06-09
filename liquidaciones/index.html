@@ -24,7 +24,7 @@ button{background:#2563eb;color:white;border:0;border-radius:8px;padding:12px 18
 
 <div class="header">
   <a class="volver" href="../">← Volver al portal</a>
-  <h1>🧮 Simulador de Liquidaciones</h1>
+  <h1>Simulador de Liquidaciones</h1>
   <p>Koala HR Tools · Versión inicial explicable</p>
 </div>
 
@@ -39,6 +39,11 @@ button{background:#2563eb;color:white;border:0;border-radius:8px;padding:12px 18
 
     <label>Legajo</label>
    <input id="legajo" placeholder="Ej: 49" oninput="buscarLegajo()">
+    <label>Categoría</label>
+<input id="categoria" readonly>
+
+<label>Sucursal</label>
+<input id="sucursal" readonly>
 
     <label>Fecha de ingreso</label>
     <input id="ingreso" type="date">
@@ -129,6 +134,11 @@ function buscarLegajo() {
 
     document.getElementById("bruto").value =
         empleado.mejorBruto || "";
+  document.getElementById("categoria").value =
+    empleado.categoria || "";
+
+document.getElementById("sucursal").value =
+    empleado.sucursal || "";
 }
 function dinero(n){
   return new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS'}).format(n || 0);
