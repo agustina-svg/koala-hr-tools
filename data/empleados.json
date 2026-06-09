@@ -1,0 +1,18 @@
+[
+  {
+    "legajo": "49",
+    "nombre": "García Rivas Nathaly",
+    "categoria": "Camarera",
+    "sucursal": "Galápagos",
+    "fechaIngreso": "2024-06-10",
+    "mejorBruto": 1676541.02
+  },
+  {
+    "legajo": "1",
+    "nombre": "John Alejandro Ruben",
+    "categoria": "Panadero",
+    "sucursal": "Galápagos",
+    "fechaIngreso": "2023-09-01",
+    "mejorBruto": 2268147.44
+  }
+]
